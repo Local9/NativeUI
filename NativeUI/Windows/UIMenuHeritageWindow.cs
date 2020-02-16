@@ -21,7 +21,7 @@ namespace NativeUI
 			Mom = mom;
 			Dad = dad;
 			MomSprite = new Sprite("char_creator_portraits", (Mom < 21)? "female_" + (Mom) : "special_female_" + (Mom - 21), new Point(0, 0), new Size(228, 228));
-			DadSprite = new Sprite("char_creator_portraits", (Dad < 21)? "Male_" + (Dad) : "special_male_" + (Dad-21), new Point(0, 0), new Size(228, 228));
+			DadSprite = new Sprite("char_creator_portraits", (Dad < 21)? "male_" + (Dad) : "special_male_" + (Dad-21), new Point(0, 0), new Size(228, 228));
 			Offset = new PointF(0, 0);
 		}
 
