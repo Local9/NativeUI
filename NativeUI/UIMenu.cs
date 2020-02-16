@@ -1308,7 +1308,7 @@ namespace NativeUI
 		/// </summary>
 		private float CalculatePanelsPosition(bool hasDescription)
 		{
-			float Height = CalculateWindowHeight() + 40 + _mainMenu.Position.Y;
+			float Height = CalculateWindowHeight() + (40 + _mainMenu.Position.Y) + 40;
 			if (hasDescription)
 				Height += _descriptionRectangle.Size.Height + 5;
 			return CalculateItemHeight() + Height;
