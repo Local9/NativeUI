@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
+using CitizenFX.Core.UI;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using Font = CitizenFX.Core.UI.Font;
-using CitizenFX.Core;
-using CitizenFX.Core.Native;
-using CitizenFX.Core.UI;
 
 namespace NativeUI.PauseMenu
 {
@@ -216,7 +216,7 @@ namespace NativeUI.PauseMenu
                     { TextAlignment = Alignment.Right };
 
                     string caption = convItem.Items[convItem.Index].ToString();
-					float offset = ScreenTools.GetTextWidth(caption, itemText.Font, itemText.Scale);
+                    float offset = ScreenTools.GetTextWidth(caption, itemText.Font, itemText.Scale);
 
                     var selected = c == Index && Focused;
 

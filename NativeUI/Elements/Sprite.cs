@@ -1,11 +1,10 @@
-﻿using System;
-
+﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
+using CitizenFX.Core.UI;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
-using CitizenFX.Core.Native;
-using CitizenFX.Core;
-using CitizenFX.Core.UI;
-using System.Drawing;
 
 namespace NativeUI
 {

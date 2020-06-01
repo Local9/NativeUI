@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using CitizenFX.Core;
+﻿using CitizenFX.Core;
 using CitizenFX.Core.Native;
 using CitizenFX.Core.UI;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
 using Font = CitizenFX.Core.UI.Font;
 
 namespace NativeUI.PauseMenu
@@ -49,7 +49,7 @@ namespace NativeUI.PauseMenu
                 }
                 else
                 {
-					Screen.Effects.Stop(ScreenEffect.MinigameTransitionIn);
+                    Screen.Effects.Stop(ScreenEffect.MinigameTransitionIn);
                 }
             }
         }

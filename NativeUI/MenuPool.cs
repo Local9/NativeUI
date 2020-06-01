@@ -34,11 +34,11 @@ namespace NativeUI
 
         public bool DisableInstructionalButtons { set { _menuList.ForEach(m => m.DisableInstructionalButtons(value)); } }
 
-		public bool BannerInheritance = true;
+        public bool BannerInheritance = true;
 
-		public bool OffsetInheritance = true;
+        public bool OffsetInheritance = true;
 
-		private readonly List<UIMenu> _menuList = new List<UIMenu>();
+        private readonly List<UIMenu> _menuList = new List<UIMenu>();
 
 
         /// <summary>
@@ -60,74 +60,74 @@ namespace NativeUI
         /// <returns>The newly created submenu.</returns>
         public UIMenu AddSubMenu(UIMenu menu, string text)
         {
-			PointF Offset = PointF.Empty;
-			if (OffsetInheritance)
-				Offset = menu.Offset;
-			return AddSubMenu(menu, text, "", Offset);
-		}
+            PointF Offset = PointF.Empty;
+            if (OffsetInheritance)
+                Offset = menu.Offset;
+            return AddSubMenu(menu, text, "", Offset);
+        }
 
-		/// <summary>
-		/// Create and add a submenu to the menu pool with a custom offset.
-		/// Adds an item with the given text to the menu, creates a corresponding submenu, and binds the submenu to the item.
-		/// The submenu inherits its title from the menu, and its subtitle from the item text.
-		/// </summary>
-		/// <param name="menu">The parent menu to which the submenu must be added.</param>
-		/// <param name="text">The name of the submenu</param>
-		/// <param name="offset">The offset of the menu</param>
-		/// <returns>The newly created submenu.</returns>
-		public UIMenu AddSubMenu(UIMenu menu, string text, PointF offset)
-		{
-			return AddSubMenu(menu, text, "", Point.Empty);
-		}
-
-		/// <summary>
-		/// Create and add a submenu to the menu pool.
-		/// Adds an item with the given text and description to the menu, creates a corresponding submenu, and binds the submenu to the item.
-		/// The submenu inherits its title from the menu, and its subtitle from the item text.
-		/// </summary>
-		/// <param name="menu">The parent menu to which the submenu must be added.</param>
-		/// <param name="text">The name of the submenu.</param>
-		/// <param name="description">The name of the submenu.</param>
-		/// <returns>The newly created submenu.</returns>
-		public UIMenu AddSubMenu(UIMenu menu, string text, string description)
+        /// <summary>
+        /// Create and add a submenu to the menu pool with a custom offset.
+        /// Adds an item with the given text to the menu, creates a corresponding submenu, and binds the submenu to the item.
+        /// The submenu inherits its title from the menu, and its subtitle from the item text.
+        /// </summary>
+        /// <param name="menu">The parent menu to which the submenu must be added.</param>
+        /// <param name="text">The name of the submenu</param>
+        /// <param name="offset">The offset of the menu</param>
+        /// <returns>The newly created submenu.</returns>
+        public UIMenu AddSubMenu(UIMenu menu, string text, PointF offset)
         {
-			PointF Offset = PointF.Empty;
-			if (OffsetInheritance)
-				Offset = menu.Offset;
-			return AddSubMenu(menu, text, description, Offset);
-		}
+            return AddSubMenu(menu, text, "", Point.Empty);
+        }
 
-		/// <summary>
-		/// Create and add a submenu to the menu pool.
-		/// Adds an item with the given text and description to the menu, creates a corresponding submenu, and binds the submenu to the item.
-		/// The submenu inherits its title from the menu, and its subtitle from the item text.
-		/// </summary>
-		/// <param name="menu">The parent menu to which the submenu must be added.</param>
-		/// <param name="text">The name of the submenu.</param>
-		/// <param name="description">The name of the submenu.</param>
-		/// <returns>The newly created submenu.</returns>
-		public UIMenu AddSubMenu(UIMenu menu, string text, string description, PointF offset)
-		{
-			UIMenuItem item = new UIMenuItem(text, description);
-			menu.AddItem(item);
-			UIMenu submenu = new UIMenu(menu.Title.Caption, text, offset);
-			if (BannerInheritance && menu.BannerTexture != null)
-				submenu.SetBannerType(menu.BannerTexture);
-			else if (BannerInheritance && menu.BannerRectangle != null)
-				submenu.SetBannerType(menu.BannerRectangle);
-			else if (BannerInheritance && menu.BannerSprite != null)
-				submenu.SetBannerType(menu.BannerSprite);
-			Add(submenu);
-			menu.BindMenuToItem(submenu, item);
-			return submenu;
+        /// <summary>
+        /// Create and add a submenu to the menu pool.
+        /// Adds an item with the given text and description to the menu, creates a corresponding submenu, and binds the submenu to the item.
+        /// The submenu inherits its title from the menu, and its subtitle from the item text.
+        /// </summary>
+        /// <param name="menu">The parent menu to which the submenu must be added.</param>
+        /// <param name="text">The name of the submenu.</param>
+        /// <param name="description">The name of the submenu.</param>
+        /// <returns>The newly created submenu.</returns>
+        public UIMenu AddSubMenu(UIMenu menu, string text, string description)
+        {
+            PointF Offset = PointF.Empty;
+            if (OffsetInheritance)
+                Offset = menu.Offset;
+            return AddSubMenu(menu, text, description, Offset);
+        }
 
-		}
+        /// <summary>
+        /// Create and add a submenu to the menu pool.
+        /// Adds an item with the given text and description to the menu, creates a corresponding submenu, and binds the submenu to the item.
+        /// The submenu inherits its title from the menu, and its subtitle from the item text.
+        /// </summary>
+        /// <param name="menu">The parent menu to which the submenu must be added.</param>
+        /// <param name="text">The name of the submenu.</param>
+        /// <param name="description">The name of the submenu.</param>
+        /// <returns>The newly created submenu.</returns>
+        public UIMenu AddSubMenu(UIMenu menu, string text, string description, PointF offset)
+        {
+            UIMenuItem item = new UIMenuItem(text, description);
+            menu.AddItem(item);
+            UIMenu submenu = new UIMenu(menu.Title.Caption, text, offset);
+            if (BannerInheritance && menu.BannerTexture != null)
+                submenu.SetBannerType(menu.BannerTexture);
+            else if (BannerInheritance && menu.BannerRectangle != null)
+                submenu.SetBannerType(menu.BannerRectangle);
+            else if (BannerInheritance && menu.BannerSprite != null)
+                submenu.SetBannerType(menu.BannerSprite);
+            Add(submenu);
+            menu.BindMenuToItem(submenu, item);
+            return submenu;
 
-		/// <summary>
-		/// Refresh index of every menu in the pool.
-		/// Use this after you have finished constructing the entire menu pool.
-		/// </summary>
-		public void RefreshIndex()
+        }
+
+        /// <summary>
+        /// Refresh index of every menu in the pool.
+        /// Use this after you have finished constructing the entire menu pool.
+        /// </summary>
+        public void RefreshIndex()
         {
             foreach (UIMenu menu in _menuList) menu.RefreshIndex();
         }

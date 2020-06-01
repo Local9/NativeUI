@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace NativeUI
 {
-	public class UIMenuSeparatorItem : UIMenuItem
-	{
-		/// <summary>
-		/// Use it to create an Empty item to separate menu Items
-		/// </summary>
-		public UIMenuSeparatorItem() : base("", "")
-		{
-		}
-	}
+    public class UIMenuSeparatorItem : UIMenuItem
+    {
+        /// <summary>
+        /// Use it to create an Empty item to separate menu Items
+        /// </summary>
+        public UIMenuSeparatorItem() : base("", "")
+        {
+        }
+    }
 }

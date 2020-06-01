@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
+﻿using CitizenFX.Core;
 using CitizenFX.Core.Native;
-using CitizenFX.Core;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace NativeUI.PauseMenu
 {

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
+using CitizenFX.Core.UI;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using Font = CitizenFX.Core.UI.Font;
-using CitizenFX.Core;
-using CitizenFX.Core.Native;
-using CitizenFX.Core.UI;
 
 namespace NativeUI.PauseMenu
 {
@@ -210,7 +210,8 @@ namespace NativeUI.PauseMenu
                     new SizeF(512, 2), Color.FromArgb(fullAlpha, Colors.White)).Draw();
                 new UIResText(Heists[Index].Description,
                     new PointF((int)res.Width - SafeSize.X - 508, SafeSize.Y + 256 + 45 + 40 * propLen + 4), 0.35f,
-                    Color.FromArgb(fullAlpha, Colors.White)) { Wrap = 508 }.Draw();
+                    Color.FromArgb(fullAlpha, Colors.White))
+                { Wrap = 508 }.Draw();
                 new UIResRectangle(new PointF((int)res.Width - SafeSize.X - 512, SafeSize.Y + 256 + 44 + 40 * propLen),
                     new SizeF(512, 45 * (int)(ScreenTools.GetTextWidth(Heists[Index].Description, Font.ChaletLondon, 0.35f) / 500)),
                     Color.FromArgb(blackAlpha, 0, 0, 0)).Draw();

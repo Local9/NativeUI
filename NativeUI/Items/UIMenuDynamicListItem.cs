@@ -61,12 +61,12 @@ namespace NativeUI
             base.Position(y);
         }
 
-		/// <summary>
-		/// Draw item.
-		/// </summary>
-		public override async Task Draw()
-		{
-			base.Draw();
+        /// <summary>
+        /// Draw item.
+        /// </summary>
+        public override async Task Draw()
+        {
+            base.Draw();
 
             string caption = CurrentListItem;
             float offset = ScreenTools.GetTextWidth(caption, _itemText.Font, _itemText.Scale);

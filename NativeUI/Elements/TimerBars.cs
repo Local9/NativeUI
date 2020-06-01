@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Font = CitizenFX.Core.UI.Font;
+﻿using CitizenFX.Core.Native;
 using CitizenFX.Core.UI;
+using System.Collections.Generic;
 using System.Drawing;
-using CitizenFX.Core.Native;
+using Font = CitizenFX.Core.UI.Font;
 
 
 namespace NativeUI

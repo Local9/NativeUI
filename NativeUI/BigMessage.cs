@@ -1,7 +1,7 @@
-﻿using System;
-using System.Runtime.Remoting.Messaging;
-using CitizenFX.Core;
+﻿using CitizenFX.Core;
 using CitizenFX.Core.Native;
+using System;
+using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 
 namespace NativeUI
